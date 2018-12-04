@@ -1,0 +1,33 @@
+# Project: EchangesValeurs
+# Makefile created by Dev-C++ 4.9.9.5
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = 
+OBJ      = ../EchangeVal/main.o ../EchangeVal/Echangevaleurs.o $(RES)
+LINKOBJ  = ../EchangeVal/main.o ../EchangeVal/Echangevaleurs.o $(RES)
+LIBS     = -L"S:/Institut-Carrieres-Commerciales/Student/Dev-Cpp/lib"  -fmessage-length=0 
+INCS     = -I"S:/Institut-Carrieres-Commerciales/Student/Dev-Cpp/include" 
+CXXINCS  = -I"S:/Institut-Carrieres-Commerciales/Student/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"S:/Institut-Carrieres-Commerciales/Student/Dev-Cpp/include/c++/3.4.2/backward"  -I"S:/Institut-Carrieres-Commerciales/Student/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"S:/Institut-Carrieres-Commerciales/Student/Dev-Cpp/include/c++/3.4.2"  -I"S:/Institut-Carrieres-Commerciales/Student/Dev-Cpp/include" 
+BIN      = EchangesValeurs.exe
+CXXFLAGS = $(CXXINCS)   -ansi -fmessage-length=0 -traditional-cpp
+CFLAGS   = $(INCS)   -ansi -fmessage-length=0 -traditional-cpp
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before EchangesValeurs.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "EchangesValeurs.exe" $(LIBS)
+
+../EchangeVal/main.o: main.c
+	$(CC) -c main.c -o ../EchangeVal/main.o $(CFLAGS)
+
+../EchangeVal/Echangevaleurs.o: Echangevaleurs.c
+	$(CC) -c Echangevaleurs.c -o ../EchangeVal/Echangevaleurs.o $(CFLAGS)

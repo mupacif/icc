@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1390838828 source:e:\laprc\echangeval\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Echangevaleurs.h"
+
+1390838112 e:\laprc\echangeval\echangevaleurs.h
+
+1542744296 source:e:\laprc\echangeval\echangevaleurs.c
+
+1542744296 source:s:\institut-carrieres-commerciales\student\verbist\principes algorithmiques et programmation\echangeval\echangevaleurs.c
+
+1542823375 source:s:\institut-carrieres-commerciales\student\verbist\principes algorithmiques et programmation\echangeval\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Echangevaleurs.c"
+
+1542744296 s:\institut-carrieres-commerciales\student\verbist\principes algorithmiques et programmation\echangeval\echangevaleurs.c
+

@@ -1,0 +1,30 @@
+# Project: Scanf
+# Makefile created by Dev-C++ 4.9.9.5
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = 
+OBJ      = main.o $(RES)
+LINKOBJ  = main.o $(RES)
+LIBS     = -L"" -L"J:/LaPRC/lib" -L"J:/LaPRC/lib/gcc" -static-libstdc++ -static-libgcc  
+INCS     = -I""  -I"J:/LaPRC/include" 
+CXXINCS  = -I""  -I"J:/LaPRC/include"  -I"J:/LaPRC/include/sys"  -I"J:/LaPRC/include/ddk"  -I"J:/LaPRC/include/gdiplus"  -I"J:/LaPRC/include/GL" 
+BIN      = Scanf.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS   = $(INCS)  
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Scanf.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Scanf.exe" $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
