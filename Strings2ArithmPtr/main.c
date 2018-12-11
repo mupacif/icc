@@ -114,7 +114,7 @@ void initialise_string(char * s)
             "au maximum %d caracteres :\n", N -1 );
      gets(s);
    }
-   while (longueur_str(s) > N -1); // fonction définie plus bas
+   while (longueur_str(s) > N -1); // fonction dÃ©finie plus bas
 }
 
 
@@ -148,8 +148,8 @@ int dernierepos( char * s)
    printf ("Entrez le caractere recherche \n");
    gets(buf);
    sscanf( buf,"%c", &caractrecherche);
-   /* Différence par rapport à la boucle de la fonction précédente : on ne sort
-      pas de la boucle quand on a trouvé le caractère recherché */
+   /* DiffÃ©rence par rapport Ã  la boucle de la fonction prÃ©cÃ©dente : on ne sort
+      pas de la boucle quand on a trouvÃ© le caractÃ¨re recherchÃ© */
    while (*s) 
      { if (*s == caractrecherche)
            { if (pastrouve)
@@ -189,7 +189,7 @@ int longueur_str(char * s)
 	    sscanf( buf,"%d", &pos);
 	  }
 	while ((pos > longueur_str(s)) || (pos<= 0));
-	// la popsition entrée au clavier est toujours > 0 
+	// la popsition entrÃ©e au clavier est toujours > 0 
 	return *(s + pos - 1); 	
 }
 
@@ -241,7 +241,7 @@ void estsuffixe (char * s)
 	    if (egal)
 		   printf("La chaine saisie est suffixe de la 1ere chaine entree au clavier\n\n");
 		else     
-	 	   ("La chaine saisie n''est pas suffixe de la 1ere chaine entree au clavier\n\n");
+	 	   printf("La chaine saisie n''est pas suffixe de la 1ere chaine entree au clavier\n\n");
 	  }
 }
 
@@ -255,7 +255,7 @@ int compare_str(char * s1, char * s2)
           s2++; 
      }         
     if ((*s1=='\0') &&  (*s2 =='\0'))
-      return 0; // on retourne la valeur 0 si les 2 chaînes sont identiques
+      return 0; // on retourne la valeur 0 si les 2 chaÃ®nes sont identiques
     else
        if  (*(s1) < *(s2)) 
           return -1;
@@ -288,7 +288,7 @@ int premierepos_ssch_in_ch( char * s, char * ss)
           pos++;
           copie_partie_str( copie_de_s , s, lgss);
           if(!(compare_str(copie_de_s,ss)))
-              return pos;   // on sort dès qu'on a trouvé
+              return pos;   // on sort dÃ¨s qu'on a trouvÃ©
           s++;
         }
        return 0;
